@@ -1,9 +1,10 @@
 # dotori-namu
 
-npm i @vue/cli
-
-
 ## Project setup
+```
+npm i @vue/cli
+```
+
 ```
 npm install
 ```
