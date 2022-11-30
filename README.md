@@ -1,5 +1,8 @@
 # dotori-namu
 
+npm i @vue/cli
+
+
 ## Project setup
 ```
 npm install
