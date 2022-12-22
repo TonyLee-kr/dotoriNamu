@@ -1,6 +1,35 @@
 <template>
   <div class="main">
+
     <header id="header">
+      <h1 class="logo-area">
+        <img src="" alt="도토리 나무"/>
+        <span class="main-title">DOTORI NAMU</span>
+      </h1>
+
+      <ul class="manu-list">
+        <li>
+          <img src="" alt=""/>
+          <h2 class="list-title">캘린더</h2>
+        </li>
+        <li>
+          <img src="" alt=""/>
+          <h2 class="list-title">회원</h2>
+        </li>
+        <li>
+          <img src="" alt=""/>
+          <h2 class="list-title">CS</h2>
+        </li>
+        <li>
+          <img src="" alt=""/>
+          <h2 class="list-title">센터관리</h2>
+        </li>
+        <li>
+          <img src="" alt=""/>
+          <h2 class="list-title">분석</h2>
+        </li>
+      </ul>
+
       <div class="button-area">
         <p>
           알림
@@ -11,19 +40,12 @@
       </div>
     </header>
 
-    <nav id="nav" class="nav">
-      <div class="nav-title">
-        <p>DOTORI NAMU</p>
-      </div>
-      <ul class="nav-list">
-        <li>캘린더</li>
-        <li>회원</li>
-        <li>CS</li>
-        <li>센터관리</li>
-        <li>분석</li>
-      </ul>
-    </nav>
   </div>
+
+  <div id="contents" class="contents">
+
+  </div>
+
 </template>
 
 <script lang="ts">
@@ -41,16 +63,48 @@ export default class mainPage extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import './../assets/style/reset.css';
+  // *{
+  //   margin:0;
+  //   padding:0;
+  // }
+  // html, body, ul, li, p, div, header, footer, section{
+  //   margin:0;
+  //   padding:0;
+  // }
+
   #header{
     display:flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     width:100vw;
     height:60px;
     border-bottom:1px solid #eee;
+
+    & .logo-area {
+      padding-left:30px;
+      font-size:18px;
+    }
+
+    & .manu-list{
+      list-style-type: none;
+      display:flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      & li{
+        display:flex;
+        padding-right: 40px;
+
+        & .list-title{
+          font-size:14px;
+        }
+
+      }
+    }
     & .button-area{
       display:flex;
-      padding-right:30px;
+      padding-right:60px;
 
       & p{
         padding-right:30px;
@@ -61,30 +115,9 @@ export default class mainPage extends Vue {
     }
   }
 
-  #nav{
-    margin:0;
-    padding:0;
-    position:relative;
-    left:0;
-    top:-60px;
-    z-index:1;
-    width:150px;
+  #contents{
+    width:100vw;
     height:100vh;
-    text-align:center;
-    border-right:1px solid #eee;
-    background-color:#fff;
-    & p{
-      border-bottom:1px solid #eee;
-      padding-top:10px;
-      padding-bottom:14px;
-    }
-    & ul{
-      list-style-type: none;
-      text-align: center;
-      & li{
-        margin-bottom:15px;
-        text-align: left;
-      }
-    }
+    background-color:#efefef;
   }
 </style>
